@@ -1,15 +1,15 @@
 # WebTech-Project-V2
-Continuous feedback application
+### Topic: Continuous feedback application
 
-Objective
+## Objective
 Developing a web application which enables users to provide continous feedback to an activity
 
-Description
+## Description
 The application must enable users to provide continuous feedback to a course or tutorial.
 
 The application is built on a Single Page Application architecture and is accessible from the browser on the desktop, mobile devices or tablets (depending on user preference).
 
-Functionality
+## Functionality
 As a professor i can define an activity at a particular date, with a description  and a unique access code for the activity. The activity is accessible for a set period of time.
 
 As a student, i can input a code to participate in a defined activity. The code can be used for the duration of the activity.

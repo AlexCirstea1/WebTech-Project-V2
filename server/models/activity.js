@@ -19,10 +19,10 @@ Activity.init({
         type: DataTypes.STRING,
       },
       startDate: {
-        type: DataTypes.DATE,
+        type: DataTypes.TIME,
       },
       endDate: {
-        type: DataTypes.DATE,
+        type: DataTypes.TIME,
       }
 }, {
     sequelize,

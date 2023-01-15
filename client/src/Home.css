@@ -36,8 +36,8 @@ span {
     border: 2px solid gray;
     border-radius: 12px;
     background-color: lightgray;
-    min-height: 20vh;
-    overflow-y: auto;
+    height: 20vh;
+    overflow-y: scroll;
 }
 .titleStream {
     text-align: center;

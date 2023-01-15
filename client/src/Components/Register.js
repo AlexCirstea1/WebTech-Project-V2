@@ -38,12 +38,12 @@ function RegisterForm() {
       <br />
       <label>
         Start Date:
-        <input type="date" value={date} onChange={(e) => setDate(e.target.value)} />
+        <input type="time" value={date} onChange={(e) => setDate(e.target.value)} />
       </label>
       <br />
       <label>
         End Date:
-        <input type="date" value={edate} onChange={(e) => seteDate(e.target.value)} />
+        <input type="time" value={edate} onChange={(e) => seteDate(e.target.value)} />
       </label>
       <br />
       <label>

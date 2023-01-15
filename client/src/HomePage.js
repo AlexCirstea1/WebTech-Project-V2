@@ -33,8 +33,8 @@ function HomePage() {
                 <p>Name: {activity.name}</p>
                 <p>Code: {activity.code}</p>
                 <p>Description: {activity.description}</p>
-                <p>Start Date: {activity.startDate}</p>
-                <p>End Date: {activity.endDate}</p>
+                <p>Start Time: {activity.startDate}</p>
+                <p>End Time: {activity.endDate}</p>
             </div>
             <div class="form-group">
                 <Feedback />

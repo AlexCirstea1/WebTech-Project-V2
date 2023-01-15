@@ -26,7 +26,8 @@ Activity.init({
       }
 }, {
     sequelize,
-    modelName: 'activity'
+    modelName: 'activity',
+    timestamps: false
 }
 );
 

@@ -21,3 +21,12 @@ button:hover {
     color: green;
     font-size: 13px;
 }
+
+.dateStyle {
+    font-size: 15px;
+    margin: 5%;
+}
+
+.stream {
+    width: 40vw;
+}

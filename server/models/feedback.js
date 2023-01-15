@@ -12,7 +12,14 @@ Feedback.init ({
     emoticon: {
         type: DataTypes.ENUM('smiley', 'frowny', 'surprised', 'confused'),
         allowNull: false
+    },
+    code: {
+        type: DataTypes.STRING,
+        allowNull: false
     }
+}, {
+    sequelize,
+    modelName: 'feedback'
 });
 
 

@@ -14,3 +14,14 @@ export const getActivity = async (code) => {
       console.error(error);
   }
 }
+
+
+export const createFeedback = async (feedback) => {
+  const response = await axios.post('/feedback', feedback);
+  return response.data;
+}
+
+export const getFeedbacks = async (code) => {
+  const response = await axios.get(`/feedbacks/${code}`);
+  return response.data;
+}

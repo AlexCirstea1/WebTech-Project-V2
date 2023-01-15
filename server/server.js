@@ -1,7 +1,7 @@
 const express = require('express');
 const sequelize = require('./database');
 const Activity = require('./models/activity');
-// const Feedback = require('./models/feedback');
+const Feedback = require('./models/feedback');
 
 sequelize.sync().then(() => console.log('db is ready'));
 
@@ -9,9 +9,21 @@ const app = express();
 
 app.use(express.json());
 
+app.get('/feedbacks/:code', async (req, res) => {
+    const reqcode = req.params.code;
+    const feedbacks = await Feedback.findAll({ where: { code: reqcode }});
+    res.send(feedbacks);
+});
+
+app.post('/feedback', async (req, res) => {
+    await Feedback.create(req.body);
+    res.send('Feedback created');
+});
+
+
 app.get('/activities', async (req, res) => {
     const activities = await Activity.findAll();
-    res.send(activities);
+    res.send(activities);  
 });
 
 app.post('/activity', async (req, res) => {

@@ -1,18 +1,33 @@
 import React, { useState } from 'react';
+import { createActivity } from '../api';
+import './Components.css';
 
 function RegisterForm() {
   const [nameActivity, setName] = useState('');
   const [date, setDate] = useState('');
+  const [edate, seteDate] = useState('');
   const [description, setDescription] = useState('');
   const [codeActivity, setCode] = useState('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    // Send a request to the server with the registration information
-    // Check if the password and confirmPassword match
-    // If match, send a post request to the server with the form data
-    // Else show an error message
+    setIsSubmitting(true);
+    try {
+      await createActivity({ name: nameActivity, startDate: date, endDate: edate, description: description, code: codeActivity });
+      setName("");
+      setDate("");
+      seteDate("");
+      setDescription("");
+      setCode("");
+      document.getElementById("finished").innerHTML = "Activity created successfully";
+    } catch (e) {
+      console.log(e.message);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
+
 
   return (
     <form onSubmit={handleSubmit}>
@@ -22,8 +37,13 @@ function RegisterForm() {
       </label>
       <br />
       <label>
-        Date:
+        Start Date:
         <input type="date" value={date} onChange={(e) => setDate(e.target.value)} />
+      </label>
+      <br />
+      <label>
+        End Date:
+        <input type="date" value={edate} onChange={(e) => seteDate(e.target.value)} />
       </label>
       <br />
       <label>
@@ -37,7 +57,10 @@ function RegisterForm() {
       </label>
       <br />
       <br />
-      <button type="submit">Create Activity</button>
+      <button type="submit" disabled={isSubmitting}>
+        Create Activity
+        </button>
+        <label id="finished" class="created"></label>
     </form>
   );
 }

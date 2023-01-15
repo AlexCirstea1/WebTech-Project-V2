@@ -1,0 +1,23 @@
+body {
+    font-family:sans-serif;
+}
+input {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin: 5px;
+}
+button {
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 5px;
+    margin: 5px;
+}
+button:hover {
+    background-color: #fff;
+}
+
+.created{
+    color: green;
+    font-size: 13px;
+}

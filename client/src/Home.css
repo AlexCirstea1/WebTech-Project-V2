@@ -32,3 +32,16 @@ span {
     margin-top: 5%;
     text-align: center;
 }
+
+.stream {
+    border: 2px solid gray;
+    border-radius: 12px;
+    background-color: lightgray;
+    margin: 10px;
+    min-height: 20vh;
+    overflow-y: auto;
+}
+.titleStream {
+    text-align: center;
+    margin-top: 5%;
+}

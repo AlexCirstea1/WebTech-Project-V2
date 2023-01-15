@@ -38,6 +38,11 @@ function HomePage() {
             </div>
             <div class="form-group">
                 <Feedback />
+                <div class="titleStream">Feedback Stream:</div>
+                <div class="stream">
+               
+
+                </div>
             </div>
         </div>
     )

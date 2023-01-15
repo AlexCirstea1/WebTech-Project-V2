@@ -30,11 +30,11 @@ function HomePage() {
     return (
         <div class="main">
             <div class="form-group">
-                <p>Name: {activity.name}</p>
-                <p>Code: {activity.code}</p>
-                <p>Description: {activity.description}</p>
-                <p>Start Time: {activity.startDate}</p>
-                <p>End Time: {activity.endDate}</p>
+                <a class="labels">Name: </a> <a class="data">{activity.name}</a><br />
+                <a class="labels">Code: </a><a class="data">{activity.code}</a><br />
+                <a class="labels">Description: </a> <a class="data">{activity.description}</a><br />
+                <a class="labels">Start Time: </a><a class="data">{activity.startDate}</a><br />
+                <a class="labels">End Time: </a> <a class="data">{activity.endDate}</a><br />
             </div>
             <div class="form-group">
                 <Feedback />

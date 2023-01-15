@@ -12,9 +12,12 @@ button {
     border: 1px solid #ccc;
     padding: 5px;
     margin: 5px;
+    width: 120px;
+    height: 30px;
 }
 button:hover {
     background-color: #fff;
+    color: black !important;
 }
 
 .created{
@@ -29,4 +32,9 @@ button:hover {
 
 .stream {
     width: 40vw;
+}
+
+.active {
+    background-color: darkgray;
+    color: #fff;
 }

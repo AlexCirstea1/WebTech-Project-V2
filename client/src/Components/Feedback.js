@@ -40,6 +40,7 @@ const Feedback = ({ isSubmitting }) => {
                 <span onClick={() => handleEmoticonClick("confused")}>😕</span>
             </div>
                 <button
+                className={emoticon ? 'active' : ''}
                     disabled={isSubmitting || !emoticon}
                     onClick={handleSubmit}
                 >

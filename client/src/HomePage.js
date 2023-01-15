@@ -40,7 +40,6 @@ function HomePage() {
                 <Feedback />
                 <div class="titleStream">Feedback Stream:</div>
                 <div class="stream">
-               
 
                 </div>
             </div>

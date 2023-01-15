@@ -25,12 +25,20 @@ const Feedback = ({ isSubmitting }) => {
     const handleSubmit = async () => {
         if (emoticon) {
             await createFeedback({ emoticon, code });
+            setEmoticon('')
+            getFeedbacks(code).then(setEmoticons)
         }
     };
 
     return (
-        <div>
+        <div>  
             <div class="center">
+            <div className="emoticons">
+                <span onClick={() => handleEmoticonClick("smiley")}>😊</span>
+                <span onClick={() => handleEmoticonClick("frowny")}>😔</span>
+                <span onClick={() => handleEmoticonClick("surprised")}>😲</span>
+                <span onClick={() => handleEmoticonClick("confused")}>😕</span>
+            </div>
                 <button
                     disabled={isSubmitting || !emoticon}
                     onClick={handleSubmit}

@@ -8,11 +8,12 @@ import {
     Route,
     Link,
     useHistory
-  } from "react-router-dom";
+} from "react-router-dom";
+import Feedback from './Components/Feedback';
 
 function HomePage() {
 
-    const{code} = useParams()
+    const { code } = useParams()
 
     const [activity, setActivity] = useState({});
 
@@ -34,6 +35,9 @@ function HomePage() {
                 <p>Description: {activity.description}</p>
                 <p>Start Date: {activity.startDate}</p>
                 <p>End Date: {activity.endDate}</p>
+            </div>
+            <div class="form-group">
+                <Feedback />
             </div>
         </div>
     )

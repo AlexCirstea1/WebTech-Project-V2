@@ -31,7 +31,7 @@ span {
     border: 2px solid gray;
     border-radius: 12px;
     background-color: #e8e8e8;
-    font-size: 45px;
+    font-size: 85px;
     margin: 10px;
 }
 
@@ -47,8 +47,8 @@ span:hover {
     border: 2px solid gray;
     border-radius: 12px;
     background-color: lightgray;
-    height: 20vh;
-    width: auto;
+    height: 30vh;
+    width: 410px;
     overflow-y: scroll;
 }
 

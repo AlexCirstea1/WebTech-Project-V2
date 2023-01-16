@@ -32,7 +32,7 @@ const Feedback = ({ isSubmitting }) => {
 
     return (
         <div>  
-            <div class="center">
+            {/* <div class="center">
             <div className="emoticons">
                 <span onClick={() => handleEmoticonClick("smiley")}>😊</span>
                 <span onClick={() => handleEmoticonClick("frowny")}>😔</span>
@@ -46,7 +46,7 @@ const Feedback = ({ isSubmitting }) => {
                 >
                     {isSubmitting ? "Subiting..." : "Submit"}
                 </button>
-            </div>
+            </div> */}
             <div class="titleStream">Feedback Stream:</div>
             <div class="stream">
                 <div className="emoticons">

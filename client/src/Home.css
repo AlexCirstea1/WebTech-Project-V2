@@ -48,7 +48,7 @@ span:hover {
     border-radius: 12px;
     background-color: lightgray;
     height: 20vh;
-    width: 20vw;
+    width: auto;
     overflow-y: scroll;
 }
 

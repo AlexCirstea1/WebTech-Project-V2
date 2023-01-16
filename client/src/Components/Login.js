@@ -16,10 +16,20 @@ function LoginForm() {
   const handleSubmit = async (event) => {
     event.preventDefault();
     setIsSubmitting(true);
-    history.push(`/activity/${codeActivity}`);
     setIsSubmitting(false);
   };
 
+  const handleProfessorSubmit = async () => {
+    setIsSubmitting(true);
+    history.push(`/professor/${codeActivity}`);
+    setIsSubmitting(false);
+  };
+  const handleStudentSubmit = async () => {
+    setIsSubmitting(true);
+    history.push(`/activity/${codeActivity}`);
+    setIsSubmitting(false);
+  };
+  
   return (
       <form onSubmit={handleSubmit}>
         <label>
@@ -28,8 +38,11 @@ function LoginForm() {
         </label>
         <br />
         <br />
-          <button type="submit" disabled={isSubmitting}>
-            Join Activity
+          <button type="submit" disabled={isSubmitting} onClick={handleStudentSubmit}>
+            Join as Student
+          </button>
+          <button type="submit" disabled={isSubmitting} onClick={handleProfessorSubmit}>
+            Join as professor
           </button>
       </form>
 

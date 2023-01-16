@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Join from './Pages/Join';
 import HomePage from './HomePage'; 
+import ProfessorPage from './ProfessorPage';
 
 
 import {
@@ -18,7 +19,8 @@ function App() {
     <Router forceRefresh={true}>
       <Switch>
         <Route exact path="/" component={Join}/>
-        <Route exact path="/activity/:code" component={HomePage}/>
+        <Route exact path="/professor/:code" component={HomePage}/>
+        <Route exact path="/activity/:code" component={ProfessorPage}/>
       </Switch>
     </Router>
   )

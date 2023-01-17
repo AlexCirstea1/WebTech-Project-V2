@@ -32,8 +32,8 @@ const Feedback = ({ isSubmitting }) => {
 
     return (
         <div>  
-            {/* <div class="center">
-            <div className="emoticons">
+             <div class="center">
+           {/* <div className="emoticons">
                 <span onClick={() => handleEmoticonClick("smiley")}>😊</span>
                 <span onClick={() => handleEmoticonClick("frowny")}>😔</span>
                 <span onClick={() => handleEmoticonClick("surprised")}>😲</span>
@@ -54,7 +54,7 @@ const Feedback = ({ isSubmitting }) => {
                         <span key={emoticon.id}> {emoticonMap[emoticon.emoticon]} <a class="dateStyle">Date: {emoticon.createdAt}</a><br/></span>
                     ))}
                 </div>
-            </div>
+            </div></div>
         </div>
     );
 };

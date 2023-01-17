@@ -30,10 +30,6 @@ button:hover {
     margin: 5%;
 }
 
-.stream {
-    width: 40vw;
-}
-
 .active {
     background-color: darkgray;
     color: #fff;

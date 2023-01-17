@@ -15,6 +15,9 @@ const Feedback = ({ isSubmitting }) => {
     const [emoticons, setEmoticons] = useState([]);
 
     useEffect(() => {
+        const interval = setInterval(() => {
+            getFeedbacks(code).then(setEmoticons)
+        }, 5000);
         getFeedbacks(code).then(setEmoticons)
     }, [code])
 
@@ -32,7 +35,7 @@ const Feedback = ({ isSubmitting }) => {
 
     return (
         <div>  
-             <div class="center">
+             <div>
            {/* <div className="emoticons">
                 <span onClick={() => handleEmoticonClick("smiley")}>😊</span>
                 <span onClick={() => handleEmoticonClick("frowny")}>😔</span>
